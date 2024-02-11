@@ -191,7 +191,7 @@ async def firmware(request):
 
 async def pethubconfig(request):
     """ Return pethubconfig """
-    return web.Response(content_type='application/javascript', body='pethubconfig=JSON.parse(\'' + json.dumps(request.app['pethubconfig']) + '\');')
+    return web.Response(content_type='application/javascript', body='pethubconfig=' + json.dumps(request.app['pethubconfig']))
 
 
 async def start_tasks(app):
